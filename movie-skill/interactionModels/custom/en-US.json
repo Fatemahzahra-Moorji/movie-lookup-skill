@@ -1,0 +1,143 @@
+{
+  "interactionModel": {
+    "dialog": {
+      "intents": [
+        {
+          "slots": [
+            {
+              "name": "m_name",
+              "elicitationRequired": true,
+              "type": "AMAZON.Movie",
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.2021129747.1060620558269"
+              }
+            }
+          ],
+          "name": "SearchMovieIntent",
+          "confirmationRequired": false,
+          "prompts": {}
+        }
+      ],
+      "delegationStrategy": "ALWAYS"
+    },
+    "languageModel": {
+      "intents": [
+        {
+          "name": "AMAZON.CancelIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.HelpIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.StopIntent",
+          "samples": []
+        },
+        {
+          "slots": [],
+          "name": "HelloWorldIntent",
+          "samples": [
+            "hello",
+            "how are you",
+            "say hi world",
+            "say hi",
+            "hi",
+            "say hello world",
+            "say hello"
+          ]
+        },
+        {
+          "name": "AMAZON.NavigateHomeIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.FallbackIntent",
+          "samples": []
+        },
+        {
+          "slots": [
+            {
+              "name": "m_name",
+              "type": "AMAZON.Movie",
+              "samples": [
+                "{m_name}",
+                "Give me information on {m_name}"
+              ]
+            }
+          ],
+          "name": "SearchMovieIntent",
+          "samples": [
+            "{m_name}",
+            "give me information about {m_name}"
+          ]
+        },
+        {
+          "slots": [],
+          "name": "NowPlayingIntent",
+          "samples": [
+            "What movies are playing right now"
+          ]
+        },
+        {
+          "slots": [],
+          "name": "PopularMovieIntent",
+          "samples": [
+            "trending movies",
+            "what movies are trending right now"
+          ]
+        },
+        {
+          "slots": [],
+          "name": "UpcomingIntent",
+          "samples": [
+            "what movies are releasing soon"
+          ]
+        },
+        {
+          "slots": [
+            {
+              "name": "m_name",
+              "type": "AMAZON.Movie"
+            }
+          ],
+          "name": "MovieRatingIntent",
+          "samples": [
+            "what are the ratings for {m_name}"
+          ]
+        },
+        {
+          "slots": [
+            {
+              "name": "releasefrom",
+              "type": "AMAZON.DATE"
+            },
+            {
+              "name": "releaseto",
+              "type": "AMAZON.DATE"
+            }
+          ],
+          "name": "MovieReleaseIntent",
+          "samples": [
+            "What movies are being released from {releasefrom} to {releaseto}",
+            "movies released between {releasefrom} and {releaseto}"
+          ]
+        }
+      ],
+      "types": [],
+      "invocationName": "movie time"
+    },
+    "prompts": [
+      {
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "What movies would you like to know about?"
+          }
+        ],
+        "id": "Elicit.Slot.2021129747.1060620558269"
+      }
+    ]
+  }
+}
